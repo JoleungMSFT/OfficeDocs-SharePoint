@@ -103,8 +103,6 @@ The OneDrive Group Policy objects work by setting registry keys on the computers
 - [Prevent users from syncing personal OneDrive accounts](use-group-policy.md#DisablePersonalSync)
  
 - [Prompt users to move Windows known folders to OneDrive](use-group-policy.md#KFMOptInWithWizard)
-    
-- [Receive OneDrive sync client updates on the Enterprise ring](use-group-policy.md#EnableEnterpriseUpdate)
 
 - [Require users to confirm large delete operations](use-group-policy.md#ForcedLocalMassDeleteDetection)
 
@@ -582,22 +580,6 @@ If you enable this setting, users will be prevented from setting up a sync relat
 Enabling this policy sets the following registry key value to 1.
   
 [HKCU\SOFTWARE\Policies\Microsoft\OneDrive]"DisablePersonalSync"="dword:00000001" 
-
-### Receive OneDrive sync client updates on the Enterprise ring
-<a name="EnableEnterpriseUpdate"> </a>
-
-This setting lets you specify the Enterprise ring for users in your organization. We release OneDrive sync client (OneDrive.exe) updates to the public through three rings— first to Insiders, then Production, and finally Enterprise.
-
-Selecting the Enterprise ring gives you some extra time to prepare for updates, but means users will need to wait to receive the latest improvements. The Enterprise ring also lets you deploy updates from an internal network location on your own schedule.
-
-Enabling this policy sets the following registry key value to 1:
-  
-[HKCU\SOFTWARE\Policies\Microsoft\OneDrive] ﻿"EnableEnterpriseUpdate"="dword:00000001"
-  
-> [!IMPORTANT]
-> This setting will be removed soon. We recommend using the new setting [Set the sync client update ring](use-group-policy.md#GPOSetUpdateRing) instead.
-  
-For more info about the update rings and how the sync client checks for updates, see [The OneDrive sync client update process](sync-client-update-process.md).
 
 ### Set the default location for the OneDrive folder
 <a name="DefaultRootDir"> </a>
